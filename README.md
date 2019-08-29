@@ -1,4 +1,4 @@
-[![Build Status](https://jenkins.sonata-nfv.eu/buildStatus/icon?job=tng-sp-ia-emu-pipeline/master)](https://jenkins.sonata-nfv.eu/job/tng-sp-ia-emu-pipeline/job/master/)
+[![Build Status](https://jenkins.sonata-nfv.eu/buildStatus/icon?job=tng-sp-ia-emu/master)](https://jenkins.sonata-nfv.eu/job/tng-sp-ia-emu/job/master/)
 [![Join the chat at https://gitter.im/sonata-nfv/5gtango-sp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sonata-nfv/5gtango-sp)
  
  <p align="center"><img src="https://github.com/sonata-nfv/tng-api-gtw/wiki/images/sonata-5gtango-logo-500px.png" /></p>
