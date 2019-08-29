@@ -269,7 +269,7 @@ class EmulatorWrapper(plugin.ManoBasePlugin):
 
         wim['qos'] = qos
 
-        response = [wim]
+        response = {'wim_list': [wim]}
 
         LOG.info(yaml.dump(response))
 
