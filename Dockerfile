@@ -26,21 +26,16 @@
 # partner consortium (www.5gtango.eu).
 
 FROM python:3.4-slim
-MAINTAINER 5GTANGO
+MAINTAINER SONATA
 
-RUN apt-get update && apt-get install -y gcc && apt-get install -y git
-RUN apt-get install -y git
-RUN pip install git+git://github.com/eandersson/amqpstorm.git@feature/reuse_channels
+# install broker with fix
+RUN apt-get update && apt-get install -y git && git clone --single-branch --branch feature/reuse_channels https://github.com/eandersson/amqpstorm.git && apt-get purge -y git
+WORKDIR /amqpstorm
+RUN python setup.py install
 
 # Configuration
 ENV broker_host amqp://guest:guest@localhost:5672/%2F
 ENV broker_exchange son-kernel
-
-# ENV Postgres
-ENV POSTGRES_USER sonata
-ENV POSTGRES_PASSWORD sonatatest
-ENV DATABASE_HOST son-postgres
-ENV DATABASE_PORT 5432
 
 # add src files
 WORKDIR /
