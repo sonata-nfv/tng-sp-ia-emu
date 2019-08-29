@@ -38,12 +38,12 @@ with open(path.join(cwd, 'requirements.txt')) as f:
     requirements = f.read().splitlines()
 
 longdesc = """
-Component to interface with the various 5GTANGO components
+Component to manage interface between MANO Framework and Emulator
 """
 
 setup(name='emulator_wrapper',
       license='Apache License, Version 2.0',
-      version='0.1',
+      version='1.0',
       url='https://github.com/sonata-nfv/tng-sp-ia-emu',
       author='Thomas Soenen',
       author_email='thomas.soenen@ugent.be',
