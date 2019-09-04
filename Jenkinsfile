@@ -65,7 +65,6 @@ pipeline {
       steps {
         sh 'docker tag registry.sonata-nfv.eu:5000/tng-sp-ia-emu:latest registry.sonata-nfv.eu:5000/tng-sp-ia-emu:v5.0'
         sh 'docker push registry.sonata-nfv.eu:5000/tng-sp-ia-emu:v5.0'
-        }
       }
     }
   }
