@@ -58,6 +58,15 @@ pipeline {
         }
 	   	}
     }        
+    stage('Promoting release v5.0') {
+      when {
+        branch 'v5.0'
+      }
+      steps {
+        sh 'docker tag registry.sonata-nfv.eu:5000/tng-sp-ia-emu:latest registry.sonata-nfv.eu:5000/tng-sp-ia-emu:v5.0'
+        sh 'docker push registry.sonata-nfv.eu:5000/tng-sp-ia-emu:v5.0'
+      }
+    }
   }
   post {
     always {
